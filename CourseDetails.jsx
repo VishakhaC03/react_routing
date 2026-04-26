@@ -24,16 +24,16 @@ class CourseDetails extends Component {
     }
 
     return (
-      <div style={{ padding: "20px" }}>
-        <h2>{course.name}</h2>
-        <p><strong>Duration:</strong> {course.duration}</p>
-        <p><strong>Price:</strong> ₹{course.price}</p>
+      <div className="p-6">
+        <h2 className="text-2xl font-bold mb-2">{course.name}</h2>
+        <p className="mb-1"><strong>Duration:</strong> {course.duration}</p>
+        <p className="mb-3"><strong>Price:</strong> ₹{course.price}</p>
 
         {/* Enroll Button */}
         {!this.state.enrolled ? (
-          <button onClick={this.handleEnroll}>Enroll</button>
+          <button onClick={this.handleEnroll} className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Enroll</button>
         ) : (
-          <p style={{ color: "green", marginTop: "10px" }}>
+          <p className="text-green-600 font-semibold mt-2">
             ✅ You have successfully enrolled!
           </p>
         )}
