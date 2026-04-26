@@ -4,8 +4,8 @@ import CourseCard from "./CourseCard";
 class CourseList extends Component {
   render() {
     return (
-      <div style={{ padding: "20px" }}>
-        <h2>Available Courses</h2>
+      <div className="p-6">
+        <h2 className="text-3xl font-bold mb-4">Available Courses</h2>
         {this.props.courses.map((course) => (
           <CourseCard key={course.id} course={course} />
         ))}
